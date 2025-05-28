@@ -10,6 +10,9 @@ import NewRawMaterials from '@/components/Raw_materials/NewRawMaterials.vue'
 import Purchases from '@/views/Purchases.vue'
 import EditarPurchases from '@/components/Purchases/EditarPurchases.vue'
 import NewPurchases from '@/components/Purchases/NewPurchases.vue'
+import PizzaRawMaterial from '@/views/PizzaRawMaterial.vue'
+import EditarPizzaRawMaterial from '@/components/PizzaRawMaterial/EditarPizzaRawMaterial.vue'
+import NewPizzaRawMaterial from '@/components/PizzaRawMaterial/NewPizzaRawMaterial.vue'
 
 const routes = [
   {
@@ -61,6 +64,21 @@ const routes = [
     path: '/add-purchases/',
     name: 'NewPurchases',
     component: NewPurchases
+  },
+  {
+    path: '/pizza-raw-material',
+    name: 'PizzaRawMaterial',
+    component: PizzaRawMaterial
+  },
+  {
+    path: '/editar-pizza-raw-material/:id',
+    name: 'EditarPizzaRawMaterial',
+    component: EditarPizzaRawMaterial
+  },
+  {
+    path: '/add-pizza-raw-material/',
+    name: 'NewPizzaRawMaterial',
+    component: NewPizzaRawMaterial
   },
   {
     path: '/about',
