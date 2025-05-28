@@ -54,7 +54,7 @@ export default {
     },
     async saveSupplier() {
       try {
-        const res = await axios.post('http://127.0.0.1:8000/api/suppliers', this.supplier)
+        const res = await axios.post('http://127.0.0.1:8000/api/supplier', this.supplier)
         if (res.status === 201) {
           this.$router.push({ name: 'Suppliers' })
           Swal.fire({

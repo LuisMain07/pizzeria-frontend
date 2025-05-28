@@ -64,7 +64,7 @@ export default {
       this.$router.push({ name: 'Suppliers' })
     },
     async updateSupplier() {
-      const res = await axios.put(`http://127.0.0.1:8000/api/suppliers/${this.supplier.id}`, this.supplier)
+      const res = await axios.put(`http://127.0.0.1:8000/api/supplier/${this.supplier.id}`, this.supplier)
       if (res.status === 200) {
         this.$router.push({ name: 'Suppliers' })
         Swal.fire({
@@ -79,7 +79,7 @@ export default {
   },
   mounted() {
     const id = this.$route.params.id
-    axios.get(`http://127.0.0.1:8000/api/suppliers/${id}`)
+    axios.get(`http://127.0.0.1:8000/api/supplier/${id}`)
       .then(response => {
         this.supplier = response.data.supplier
       })

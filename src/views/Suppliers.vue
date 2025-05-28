@@ -56,7 +56,7 @@ export default {
         cancelButtonText: 'Cancelar'
       }).then((result) => {
         if (result.isConfirmed) {
-          axios.delete(`http://127.0.0.1:8000/api/suppliers/${id}`)
+          axios.delete(`http://127.0.0.1:8000/api/supplier/${id}`)
             .then(response => {
               if (response.data.success) {
                 Swal.fire('¡Eliminado!', '', 'success')
@@ -67,14 +67,14 @@ export default {
       })
     },
     editSupplier(id) {
-      this.$router.push({ name: 'EditarProveedor', params: { id: `${id}` } })
+      this.$router.push({ name: 'EditarSupplier', params: { id: `${id}` } })
     },
     newSupplier() {
-      this.$router.push({ name: 'NuevoProveedor' })
+      this.$router.push({ name: 'NewSupplier' })
     }
   },
   mounted() {
-    axios.get('http://127.0.0.1:8000/api/suppliers')
+    axios.get('http://127.0.0.1:8000/api/supplier')
       .then(response => (this.suppliers = response.data.suppliers))
   }
 }
