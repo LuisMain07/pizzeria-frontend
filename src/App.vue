@@ -3,7 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/suppliers">Suppliers</router-link> |
-    <router-link to="/raw_materials">Raw_materials</router-link> |
+    <router-link to="/rawmaterials">Raw_materials</router-link> |
     <router-link to="/purchases">Purchases</router-link> |
     <router-link to="/pizza_raw_material">Pizza_raw_material</router-link> |
   </nav>
