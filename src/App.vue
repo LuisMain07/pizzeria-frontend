@@ -5,7 +5,7 @@
     <router-link to="/suppliers">Suppliers</router-link> |
     <router-link to="/rawmaterials">Raw_materials</router-link> |
     <router-link to="/purchases">Purchases</router-link> |
-    <router-link to="/pizza_raw_material">Pizza_raw_material</router-link> |
+    <router-link to="/pizza_raw_material">Pizza_raw_material</router-link> 
   </nav>
   <router-view/>
 </template>

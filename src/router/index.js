@@ -7,6 +7,9 @@ import NewSupplier from '@/components/Suppliers/NewSupplier.vue'
 import Raw_materials from '@/views/Raw_materials.vue'
 import EditarRawMaterials from '@/components/Raw_materials/EditarRawMaterials.vue'
 import NewRawMaterials from '@/components/Raw_materials/NewRawMaterials.vue'
+import Purchases from '@/views/Purchases.vue'
+import EditarPurchases from '@/components/Purchases/EditarPurchases.vue'
+import NewPurchases from '@/components/Purchases/NewPurchases.vue'
 
 const routes = [
   {
@@ -43,6 +46,21 @@ const routes = [
     path: '/add-raw-materials/',
     name: 'NewRawMaterials',
     component: NewRawMaterials
+  },
+  {
+    path: '/purchases',
+    name: 'Purchases',
+    component: Purchases
+  },
+  {
+    path: '/editar-purchases/:id',
+    name: 'EditarPurchases',
+    component: EditarPurchases
+  },
+  {
+    path: '/add-purchases/',
+    name: 'NewPurchases',
+    component: NewPurchases
   },
   {
     path: '/about',
