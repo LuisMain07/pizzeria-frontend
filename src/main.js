@@ -10,6 +10,8 @@ import App from './App.vue';
 import router from './router';
 
 import './assets/tailwind.css';
+import { createApp } from 'vue';
+import './assets/main.css';
 
 library.add(faPhone);
 library.add(faUser);
