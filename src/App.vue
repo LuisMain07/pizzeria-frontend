@@ -1,7 +1,11 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/suppliers">Suppliers</router-link> |
+    <router-link to="/rawmaterials">Raw_materials</router-link> |
+    <router-link to="/purchases">Purchases</router-link> |
+    <router-link to="/pizza-raw-material">Pizza_raw_material</router-link> 
   </nav>
   <router-view/>
 </template>
