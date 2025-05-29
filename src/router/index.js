@@ -19,6 +19,9 @@ import NewUser from '@/components/Users/NewUser.vue'
 import Cliente from '@/views/Clientes.vue'
 import EditarCliente from '@/components/Clientes/EditarClientes.vue'
 import NewCliente from '@/components/Clientes/NewClientes.vue'
+import Employees from '../views/Employees.vue'
+import EditEmployee from '../components/Employee/EditEmployee.vue'
+import NewEmployee from '../components/Employee/NewEmployee.vue'
 
 const routes = [
   {
@@ -115,6 +118,21 @@ const routes = [
     path: '/add-cliente/',
     name: 'NewCliente',
     component: NewCliente
+  },
+  {
+  path: '/employees',
+  name: 'Employees',
+  component: Employees
+  },
+  {
+    path: '/editar-empleado/:id',
+    name: 'EditEmployee',
+    component: EditEmployee
+  },
+  {
+    path: '/add-empleado',
+    name: 'NewEmployee',
+    component: NewEmployee
   },
   {
     path: '/about',
