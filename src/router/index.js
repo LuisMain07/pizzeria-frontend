@@ -13,6 +13,15 @@ import NewPurchases from '@/components/Purchases/NewPurchases.vue'
 import PizzaRawMaterial from '@/views/PizzaRawMaterial.vue'
 import EditarPizzaRawMaterial from '@/components/PizzaRawMaterial/EditarPizzaRawMaterial.vue'
 import NewPizzaRawMaterial from '@/components/PizzaRawMaterial/NewPizzaRawMaterial.vue'
+import User from '@/views/User.vue'
+import EditarUser from '@/components/Users/EditarUser.vue'
+import NewUser from '@/components/Users/NewUser.vue'
+import Cliente from '@/views/Clientes.vue'
+import EditarCliente from '@/components/Clientes/EditarClientes.vue'
+import NewCliente from '@/components/Clientes/NewClientes.vue'
+import Employees from '../views/Employees.vue'
+import EditEmployee from '../components/Employee/EditEmployee.vue'
+import NewEmployee from '../components/Employee/NewEmployee.vue'
 
 const routes = [
   {
@@ -79,6 +88,51 @@ const routes = [
     path: '/add-pizza-raw-material/',
     name: 'NewPizzaRawMaterial',
     component: NewPizzaRawMaterial
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: User
+  },
+  {
+    path: '/editar-user/:id',
+    name: 'EditarUser',
+    component: EditarUser
+  },
+  {
+    path: '/add-user/',
+    name: 'NewUser',
+    component: NewUser
+  },
+  {
+    path: '/cliente',
+    name: 'Cliente',
+    component: Cliente
+  },
+  {
+    path: '/editar-cliente/:id',
+    name: 'EditarCliente',
+    component: EditarCliente
+  },
+  {
+    path: '/add-cliente/',
+    name: 'NewCliente',
+    component: NewCliente
+  },
+  {
+  path: '/employees',
+  name: 'Employees',
+  component: Employees
+  },
+  {
+    path: '/editar-empleado/:id',
+    name: 'EditEmployee',
+    component: EditEmployee
+  },
+  {
+    path: '/add-empleado',
+    name: 'NewEmployee',
+    component: NewEmployee
   },
   {
     path: '/about',
