@@ -148,9 +148,9 @@ export default {
           identification_number: this.employee.identification_number,
           salary: this.employee.salary,
           hire_date: this.employee.hire_date
-        }
+        };
 
-        const res = await axios.post('http://127.0.0.1:8000/api/employees', payload)
+        const res = await axios.post('http://127.0.0.1:8000/api/employee', payload)
 
         if (res.status === 201) {
           this.$router.push({ name: 'Employees' })
@@ -163,11 +163,10 @@ export default {
           })
         }
       } catch (error) {
-        console.log(error) // Para depurar errores
         Swal.fire({
           icon: 'error',
           title: 'Error al registrar el empleado',
-          text: error.response?.data?.message || 'Ocurrió un error inesperado'
+          text: error.response?.data?.detalle || error.response?.data?.message || 'Ocurrió un error inesperado'
         })
       }
     }
