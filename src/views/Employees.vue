@@ -27,7 +27,7 @@
           <td>{{ employee.user?.name || 'N/A' }}</td>
           <td>{{ employee.position }}</td>
           <td>{{ employee.identification_number }}</td>
-          <td>{{ employee.salary.toFixed(2) }}</td>
+          <td>{{ employee.salary ? Number(employee.salary).toFixed(2) : 'N/A' }}</td>
           <td>{{ formatDate(employee.hire_date) }}</td>
           <td>
             <button @click="deleteEmployee(employee.id)" class="btn btn-danger mx-2">
@@ -67,7 +67,7 @@ export default {
         cancelButtonText: 'Cancelar'
       }).then((result) => {
         if (result.isConfirmed) {
-          axios.delete(`http://127.0.0.1:8000/api/employees/${id}`)
+          axios.delete(`http://127.0.0.1:8000/api/employee/${id}`)
             .then(response => {
               if (response.data.success) {
                 Swal.fire('¡Eliminado!', '', 'success')
@@ -88,7 +88,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('http://127.0.0.1:8000/api/employees')
+    axios.get('http://127.0.0.1:8000/api/employee')
       .then(response => {
         this.employees = response.data.employees
       })

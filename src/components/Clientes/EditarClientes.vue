@@ -84,12 +84,13 @@ export default {
     },
     async updateClient() {
       try {
-        await axios.put(`http://127.0.0.1:8000/api/users/${this.user.id}`, {
+        await axios.put(`http://127.0.0.1:8000/api/user/${this.user.id}`, {
           name: this.user.name,
           email: this.user.email
         })
 
-        const res = await axios.put(`http://127.0.0.1:8000/api/clients/${this.client.id}`, {
+        const res = await axios.put(`http://127.0.0.1:8000/api/client/${this.client.id}`, {
+          user_id: this.client.user_id,
           address: this.client.address,
           phone: this.client.phone
         })
@@ -116,14 +117,14 @@ export default {
   async mounted() {
     const id = this.$route.params.id
     try {
-      const res = await axios.get(`http://127.0.0.1:8000/api/clients/${id}`)
+      const res = await axios.get(`http://127.0.0.1:8000/api/client/${id}`)
       this.client = res.data.client
       // Suponiendo que el API incluye el user o user_id para obtener usuario aparte
       if (res.data.client.user) {
         this.user = res.data.client.user
       } else if (this.client.user_id) {
         // Si no viene user embebido, consulta el usuario aparte
-        const userRes = await axios.get(`http://127.0.0.1:8000/api/users/${this.client.user_id}`)
+        const userRes = await axios.get(`http://127.0.0.1:8000/api/user/${this.client.user_id}`)
         this.user = userRes.data.user
       }
     } catch (error) {
