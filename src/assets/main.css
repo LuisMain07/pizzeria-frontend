@@ -38,7 +38,7 @@ ESTA ESTENSIONS Tailwind CSS Intellisense */
     @apply py-4 px-6 text-sm text-gray-900 border-b border-gray-200;
   }
 
-  /* Navegación */
+  /* Navegación*/
   .nav-link {
     @apply text-white hover:text-red-100 px-3 py-2 rounded-md transition-colors duration-200;
   }
@@ -47,7 +47,7 @@ ESTA ESTENSIONS Tailwind CSS Intellisense */
     @apply bg-red-700 text-white;
   }
 
-  /* Dashboard */
+  /* Dashboard*/
   .dashboard-card {
     @apply bg-white shadow-md rounded-lg p-6 border border-gray-200 hover:shadow-lg transition-all duration-200 cursor-pointer transform hover:-translate-y-1;
   }
