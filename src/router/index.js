@@ -22,15 +22,15 @@ import NewCliente from '@/components/Clientes/NewClientes.vue'
 import Employees from '../views/Employees.vue'
 import EditEmployee from '../components/Employee/EditEmployee.vue'
 import NewEmployee from '../components/Employee/NewEmployee.vue'
-// Importaciones para Pizza Ingredients
 import PizzaIngredients from '@/views/PizzaIngredients.vue'
 import EditarPizzaIngredients from '@/components/PizzaIngredients/EditarPizzaIngredients.vue'
 import NewPizzaIngredients from '@/components/PizzaIngredients/NewPizzaIngredients.vue'
-// Importaciones para Extra Ingredients
 import ExtraIngredients from '@/views/ExtraIngredients.vue'
 import EditarExtraIngredients from '@/components/ExtraIngredients/EditarExtraIngredients.vue'
 import NewExtraIngredients from '@/components/ExtraIngredients/NewExtraIngredients.vue'
-
+import Orders from '@/views/Orders.vue'
+import EditarOrder from '@/components/Order/EditarOrder.vue'
+import NewOrder from '@/components/Order/NewOrder.vue'
 const routes = [
   {
     path: '/',
@@ -181,7 +181,22 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+  },
+  {
+  path: '/orders',
+  name: 'Orders',
+  component: Orders
+},
+{
+  path: '/orders/new',
+  name: 'NewOrder',
+  component: NewOrder
+},
+{
+  path: '/orders/edit/:id',
+  name: 'EditarOrder',
+  component: EditarOrder
+}
 ]
 
 const router = createRouter({
